@@ -1,6 +1,4 @@
 import { Router, Request, Response } from "express";
-import { User } from "../models/User";
-import PostgresDataSource from "../config/dataSource";
 
 const routerV1 = Router();
 routerV1.get("/products", async (req: Request, res: Response) => {
@@ -12,11 +10,8 @@ routerV1.get("/products", async (req: Request, res: Response) => {
     // user.isActive = true;
 
     // await PostgresDataSource.manager.save(user);
-    const userRepo = PostgresDataSource.getRepository(User);
-    const data = await userRepo.find();
-    res.json({
-      data,
-    });
+    //const userRepo = PostgresDataSource.getRepository(User);
+    res.send("products");
   } catch (err: any) {
     console.log(err);
   }
