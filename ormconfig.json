@@ -1,0 +1,14 @@
+{
+  "type": "mysql",
+  "host": "localhost",
+  "port": 3306,
+  "username": "root",
+  "password": "",
+  "database": "kothayjabencd",
+  "entities": ["src/v1/models/**/*.ts"],
+  "migrations": ["src/v1/migrations/**/*.ts"],
+  "cli": {
+    "entitiesDir": "src/v1/models",
+    "migrationsDir": "src/v1/migration"
+  }
+}
